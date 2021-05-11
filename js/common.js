@@ -114,9 +114,35 @@ $(function() {
 		}
 	});
 
-	let portfolio = $('.portfolio-grid');
 
-	var mixer = mixitup(portfolio);
+
+	$(".soft-scroll").mPageScroll2id();
+
+	$(window).scroll(function() {
+		var height = $(window).scrollTop();
+		 /*Если сделали скролл на 100px задаём новый класс для header*/
+		if(height > 100){
+		$('.scroll-up').addClass('scroll-up_visible');
+		} else{
+		/*Если меньше 100px удаляем класс для header*/
+		$('.scroll-up').removeClass('scroll-up_visible');
+		}
+	});
+	
+	let a = $(".hexagon");
+	let posa = a.position();
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos + 70 >= a.offset().top && windowpos <= a.offset().top + a.height()-70) {
+			$(".hexagon").hide();
+		} else {
+			$(".hexagon").show();
+		}
+	});
+
+	$(".user-phone").mask("+ 7 (999)-999-99-99");
+	
+	var mixer = mixitup('.portfolio-grid');
 
 	
 	
