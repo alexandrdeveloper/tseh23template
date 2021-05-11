@@ -85,12 +85,12 @@
 				<div class="row">
 					<div class="col-12 portfolio-controls-container">
 						<div class="portfolio-nav controls">
-							<button type="button" data-filter="all" class="portfolio-nav__toggle portfolio-nav__toggle_active">Все</button>
+							<button type="button" data-filter="all" class="portfolio-nav__toggle portfolio-nav__toggle_all portfolio-nav__toggle_active">Все</button>
 							<!-- /.portfolio-nav__toggle -->
 							<button type="button" data-filter=".category-b" class="portfolio-nav__toggle">Металлоконструкции</button>
 							<!-- /.portfolio-nav__toggle -->
 							<div class="portfolio-nav__toggle portfolio-subnav">
-								<div class="portfolio-subnav__list">
+								<div class="portfolio-subnav__list portfolio-subnav__list_desktop">
 									<button class="portfolio-subnav__item" data-toggle=".category-a">Ворота</button>
 									<button class="portfolio-subnav__item" data-toggle=".category-b">Навесы</button>
 									<button class="portfolio-subnav__item" data-toggle=".category-c">Калитки</button>
@@ -103,13 +103,14 @@
 									
 								</div>
 								<!-- /.portfolio-subnav__list -->
-								
+								<div class="portfolio-subnav__toggle">Металлические изделия</div>
+								<!-- /.subnav-toggle -->   
 							</div>
 							<!-- /.portfolio-nav__toggle -->
 							<button type="button" data-filter=".category-c" class="portfolio-nav__toggle">Быстровозводимые <br>
 								здания</button>
 							<!-- /.portfolio-nav__toggle -->
-							<button class="portfolio-nav__toggle subnav-toggle link-more">
+							<button class="portfolio-nav__toggle gallery-toggle gallery-init link-more">
 								<span>Все фото</span> 
 								<svg width="136" height="24" viewBox="0 0 136 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M135.217 13.0607C135.803 12.4749 135.803 11.5251 135.217 10.9393L125.671 1.3934C125.085 0.807611 124.135 0.807611 123.549 1.3934C122.964 1.97919 122.964 2.92893 123.549 3.51472L132.035 12L123.549 20.4853C122.964 21.0711 122.964 22.0208 123.549 22.6066C124.135 23.1924 125.085 23.1924 125.671 22.6066L135.217 13.0607ZM0.648438 13.5H134.156V10.5H0.648438V13.5Z" fill="#BB3C0D"/>
@@ -125,7 +126,7 @@
 				<!-- /.row -->
 				<div class="row portfolio-grid">
 					<div class="mix col-md-4 col-sm-6 portfolio-grid__box  category-a">
-						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item">
+						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item gallery-init">
 							<div class="portfolio-grid__photo">
 								<img src="img/portfolio/img-1.jpg" alt="portfolio">
 							</div>
@@ -144,7 +145,7 @@
 					</div>
 					<!-- /.col-lg-4 -->
 					<div class="mix col-md-4 col-sm-6 portfolio-grid__box  category-b">
-						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item">
+						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item gallery-init">
 							<div class="portfolio-grid__photo">
 								<img src="img/portfolio/img-1.jpg" alt="portfolio">
 							</div>
@@ -163,7 +164,7 @@
 					</div>
 					<!-- /.col-lg-4 -->
 					<div class="mix col-md-4 col-sm-6 portfolio-grid__box category-a">
-						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item">
+						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item gallery-init">
 							<div class="portfolio-grid__photo">
 								<img src="img/portfolio/img-1.jpg" alt="portfolio">
 							</div>
@@ -182,7 +183,7 @@
 					</div>
 					<!-- /.col-lg-4 -->
 					<div class="mix col-md-4 col-sm-6 portfolio-grid__box category-c">
-						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item">
+						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item gallery-init ">
 							<div class="portfolio-grid__photo">
 								<img src="img/portfolio/img-1.jpg" alt="portfolio">
 							</div>
@@ -201,7 +202,7 @@
 					</div>
 					<!-- /.col-lg-4 -->
 					<div class="mix col-md-4 col-sm-6 portfolio-grid__box category-a">
-						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item">
+						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item gallery-init">
 							<div class="portfolio-grid__photo">
 								<img src="img/portfolio/img-1.jpg" alt="portfolio">
 							</div>
@@ -220,7 +221,7 @@
 					</div>
 					<!-- /.col-lg-4 -->
 					<div class="mix col-md-4 col-sm-6 portfolio-grid__box category-b">
-						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item">
+						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item gallery-init">
 							<div class="portfolio-grid__photo">
 								<img src="img/portfolio/img-1.jpg" alt="portfolio">
 							</div>
@@ -238,8 +239,8 @@
 						<!-- /.portfolio-grid__item -->
 					</div>
 					<!-- /.col-lg-4 -->
-					<div class="mix col-md-4 col-sm-6 portfolio-grid__box category-a">
-						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item">
+					<div class="mix col-md-4 col-sm-6 portfolio-grid__box category-a ">
+						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item gallery-init">
 							<div class="portfolio-grid__photo">
 								<img src="img/portfolio/img-1.jpg" alt="portfolio">
 							</div>
@@ -258,7 +259,7 @@
 					</div>
 					<!-- /.col-lg-4 -->
 					<div class="mix col-md-4 col-sm-6 portfolio-grid__box category-c">
-						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item">
+						<a href="img/portfolio/img-1.jpg" class="portfolio-grid__item gallery-init">
 							<div class="portfolio-grid__photo">
 								<img src="img/portfolio/img-1.jpg" alt="portfolio">
 							</div>
@@ -701,6 +702,19 @@
 		<a href="#wrapper" class="scroll-up soft-scroll">
 			<span></span>
 		</a>
+
+		<div class="portfolio-subnav__list portfolio-subnav__list_mobile">
+			<button class="portfolio-subnav__item" data-toggle=".category-a">Ворота</button>
+			<button class="portfolio-subnav__item" data-toggle=".category-b">Навесы</button>
+			<button class="portfolio-subnav__item" data-toggle=".category-c">Калитки</button>
+			<button class="portfolio-subnav__item" data-toggle=".category-a">Заборы</button>
+			<button class="portfolio-subnav__item" data-toggle=".category-b">Лестницы</button>
+			<button class="portfolio-subnav__item" data-toggle=".category-c">Беседки</button>
+			<button class="portfolio-subnav__item" data-toggle=".category-a">Садовая<br>мебель</button>
+			<button class="portfolio-subnav__item" data-toggle=".category-b">Мангалы</button>
+			<button class="portfolio-subnav__item" data-toggle=".category-c">Малые архитектурные формы</button>
+			
+		</div>
 			
 				
 									

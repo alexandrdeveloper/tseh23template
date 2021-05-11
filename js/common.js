@@ -1,4 +1,5 @@
 $(function() {
+	
 
 	let burger = $('.b-burger');
 	let menu = $('.b-menu');
@@ -36,19 +37,23 @@ $(function() {
 		$(this).parent().toggleClass('portfolio-subnav_active');
 	});
 
-	$('.subnav-toggle').on('click', function(e) {
-		e.preventDefault();
-		$('.portfolio-subnav').toggleClass('portfolio-subnav_visible');
-	});
-
 	$(document).mouseup(function (e){ // событие клика по веб-документу
-		var div = $(".portfolio-subnav_visible"); // тут указываем ID элемента
+		var div = $(".portfolio-subnav__list_active"); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-			$('.portfolio-subnav').removeClass('portfolio-subnav_visible');
+			$('.portfolio-subnav__list').removeClass('portfolio-subnav__list_active');
 		}
 	});
 
+	$('.portfolio-subnav__toggle').on('click', function(e) {
+		e.preventDefault();
+		$('.portfolio-subnav__list').toggleClass('portfolio-subnav__list_active');
+	});
+
+	
+	jQuery('.gallery-init').on('click', function () {
+		jQuery('.portfolio-grid').magnificPopup('open');
+	});
 	
 	$('.portfolio-grid').magnificPopup({
 		delegate: 'a',
@@ -66,13 +71,15 @@ $(function() {
 				return item.el.attr('title');
 			}
 		}
-	});
+	}); 
 
-	$('.portfolio-nav__toggle').on('click', function(e) {
-		//e.preventDefault();
-		$('.portfolio-nav__toggle').removeClass('portfolio-nav__toggle_active');
-		$(this).addClass('portfolio-nav__toggle_active');
-	});
+	
+
+	
+	
+	
+
+	
 
 	$('.portfolio-subnav__item').on('click', function(e) {
 		e.preventDefault();
@@ -129,18 +136,12 @@ $(function() {
 		}
 	});
 	
-	let a = $(".hexagon");
-	let posa = a.position();
-	$(window).scroll(function() {
-		var windowpos = $(window).scrollTop();
-		if (windowpos + 70 >= a.offset().top && windowpos <= a.offset().top + a.height()-70) {
-			$(".hexagon").hide();
-		} else {
-			$(".hexagon").show();
-		}
-	});
+	
+	
 
 	$(".user-phone").mask("+ 7 (999)-999-99-99");
+
+	
 	
 	var mixer = mixitup('.portfolio-grid');
 
