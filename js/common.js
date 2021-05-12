@@ -30,12 +30,23 @@ $(function() {
 		$(this).parent().toggleClass('b-sidebar_visible');
 	});
 
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".b-sidebar_visible"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+			$('.b-sidebar').removeClass('b-sidebar_visible');
+			$('.b-sidebar-toggle').removeClass('b-sidebar-toggle_active');
+		}
+	});
+
 
 	$('.portfolio-subnav__toggle').on('click', function(e) {
 		e.preventDefault();
 		$(this).toggleClass('portfolio-subnav__toggle_active');
 		$(this).parent().toggleClass('portfolio-subnav_active');
 	});
+
+	
 
 	$(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".portfolio-subnav__list_active"); // тут указываем ID элемента
@@ -138,6 +149,8 @@ $(function() {
 	
 	
 	
+
+
 
 	$(".user-phone").mask("+ 7 (999)-999-99-99");
 
